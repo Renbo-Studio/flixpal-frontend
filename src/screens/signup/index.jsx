@@ -1,4 +1,3 @@
-import './index.scss';
 import React, { useState } from 'react';
 import backIcon from '../../assets/icon/back.svg';
 import pinIcon from '../../assets/icon/Group.svg';
@@ -50,12 +49,12 @@ const SignUp = () => {
         switch (stage) {
         case 1:
         return (
-            <div className='h-100'>
-                <button onClick={handlePrevious} className='back-nav'>
-                    <img src={backIcon} alt="" />
-                    <span>Fill your profile</span>
+            <div className='h-full'>
+                <button onClick={handlePrevious} className='flex items-center gap-5'>
+                    <img src={backIcon} width={'12px'} alt="" />
+                    <span className='text-white leading-4'>Fill your profile</span>
                 </button>
-                <div className='form-con'>
+                <div className='py-10 pt-20 [&>label]:text-white [&>label]:block [&>input]:p-2 [&>input]:w-full [&>input]:border-solid [&>input]:border-2 [&>input]:border-white [&>input]:mb-4 [&>select]:mb-4 [&>select]:p-2 [&>select]:w-full '>
                     <label htmlFor="phone">Phone Number</label>
                     <input type="number" placeholder='+123 000 0000 000' id='phone'/>
                     <label htmlFor="birthdate">Birth Date</label>
@@ -78,16 +77,16 @@ const SignUp = () => {
         );
         case 2:
         return (
-            <div className='h-100'>
-                <button onClick={handlePrevious} className='back-nav'>
-                    <img src={backIcon} alt="" />
-                    <span>Create new PIN</span>
+            <div className='h-full'>
+                <button onClick={handlePrevious} className='flex items-center gap-5'>
+                    <img src={backIcon} width={'12px'} alt="" />
+                    <span className='text-white leading-4'>Create new PIN</span>
                 </button>
-                <div className='form-con'>
+                <div className='h-4/5 flex items-center flex-col justify-center'>
                     <div className='flex items-center justify-center'>
                         <img width='220px' src={pinIcon} alt="icon" />
                     </div>
-                    <p className='text-center pt-10'>Add your PIN number to make your account more secure.</p>
+                    <p className='text-center pt-10 text-white'>Add your PIN number to make your account more secure.</p>
                     <div className='flex items-center justify-center'>
                         <PinInput 
                             length={4} 
@@ -114,11 +113,11 @@ const SignUp = () => {
         );
         default:
         return (
-            <div className='h-100 relative'>
+            <div className='h-full relative'>
                 <div className='form-con'>
                     <div className='flex items-center flex-col justify-center bg-neutral-800 py-14 rounded-lg px-12'>
                        <img src={successIcon} alt="icon" />
-                       <h2 className='pt-5 text-3xl font-bold'>Congratulations!</h2>
+                       <h2 className='pt-5 text-3xl font-bold text-white'>Congratulations!</h2>
                        <p className='text-center font-light text-gray-400 text-sm py-3'>Your account ready to use. You will be redirected to the home page</p>
 
                        <br />
