@@ -4,7 +4,7 @@ import SignUp from './screens/signup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
-
+import SignIn from './screens/login';
 import Loading from './components/Onboarding/Loading'
 import Loading2 from './components/Onboarding/Loading2'
 import Loading3 from './components/Onboarding/Loading3'
@@ -21,9 +21,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='2' element={<Loading2 />} />
         <Route path='3' element={<Loading3 />} />
         <Route path='4' element={<Loading4 />} />
+        <Route path='signup' element={<SignUp />} />
+        <Route path='login' element={<SignIn />} />
       </Route>
 
-      <Route path='/signup' element={<SignUp />} />
 
 
     </Routes>
